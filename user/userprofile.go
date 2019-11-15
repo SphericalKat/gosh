@@ -32,11 +32,11 @@ func (up *UserProfile) SetupUserProfile() {
 		log.Fatal(err)
 	}
 
-	dir = "/home/amole/go/src/github.com/ATechnoHazard/gosh"
+	//dir = "/home/amole/go/src/github.com/ATechnoHazard/gosh"
 
 	// remove trailing homedir if present
 	path := utils.Remove(strings.Split(dir, "/"), 0)
-	log.Println(dir)
+	//log.Println(dir)
 	if path[0] == "home" && path[1] == username {
 		path = utils.Remove(utils.Remove(path, 0), 0)
 	}
