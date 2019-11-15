@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/ATechnoHazard/gosh/user"
 	"github.com/ATechnoHazard/gosh/utils"
+	"github.com/eiannone/keyboard"
 	"os"
 	"os/signal"
 	"syscall"
@@ -37,13 +38,15 @@ func main() {
 
 		// regular input
 		default:
-			input, err := reader.ReadString('\n')
-			if err != nil {
-				_, err = fmt.Fprintln(os.Stderr, err)
-				if err != nil {
-					panic(err)
-				}
-			}
+			//input, err := reader.ReadString('\n')
+			//if err != nil {
+			//	_, err = fmt.Fprintln(os.Stderr, err)
+			//	if err != nil {
+			//		panic(err)
+			//	}
+			//}
+
+
 
 			// execute input command and log errors if any
 			if err = utils.ExecInput(input); err != nil {
